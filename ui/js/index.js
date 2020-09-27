@@ -17,7 +17,7 @@ try {
     ws = new WebSocket(`ws://localhost:3000`);
   } else {
     // ws:// is for unsecured, wss:// is for secured conn over TLS
-    ws = new WebSocket(`wss://chat.saa7-codes.xyz`);
+    ws = new WebSocket(`wss://ws.saa7-codes.xyz`);
   }
 } catch(e) {
   console.log('Web socket init error', e);
