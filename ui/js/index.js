@@ -12,10 +12,12 @@ inputBtn.addEventListener('keyup', function(event) {
 let ws;
 try {
   // Local dev
+  // Multiple values of hostname based on browsers possibly
   if (['localhost', '127.0.0.1', ''].includes(location.hostname)) {
     ws = new WebSocket(`ws://localhost:3000`);
   } else {
-    ws = new WebSocket(`wss://jemisthe.best`);
+    // ws:// is for unsecured, wss:// is for secured conn over TLS
+    ws = new WebSocket(`wss://chat.saa7-codes.xyz`);
   }
 } catch(e) {
   console.log('Web socket init error', e);
